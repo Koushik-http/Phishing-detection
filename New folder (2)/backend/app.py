@@ -16,9 +16,9 @@ def check_url():
     url = data['url']
     
     if is_phishing(url):
-        return jsonify({'message': 'This URL is suspected to be phishing!'})
+        return jsonify({'message': 'This URL is suspected to be phishing! and it is not secured'})
     else:
-        return jsonify({'message': 'This URL seems to be safe.'})
+        return jsonify({'message': 'This URL seems to be safe. Redirecting to the Link'})
 
 if __name__ == '__main__':
     app.run(debug=True)
